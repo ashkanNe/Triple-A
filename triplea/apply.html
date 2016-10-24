@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani|Raleway|Josefin+Sans|Allerta+Stencil|Architects+Daughter|Walter+Turncoat' rel='stylesheet' type='text/css'>
+    <title>Triple A | Apply</title>
+    <link rel="shortcut icon" href="img/icon.ico">
+  </head>
+  
+  <body>
+    <!-- header -->
+     <header>
+      <img style="height: 125px; width: auto" align="left" src="img/logo.png">
+      <h1>Triple A</h1>
+      <br><br>
+      <h2>We design. You enjoy.</h2>
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+          <a style="font-size: 18px;" href="about.html"><li>About
+          <ul>
+            <li class="drop"><a href="about.html#aleya">Aleya</a></li>
+            <li class="drop"><a href="about.html#alyssa">Alyssa</a></li>
+            <li class="drop"><a href="about.html#ashkan">Ashkan</a></li>
+          </ul>
+        </li></a>
+        <a href="portfolio.html"><li>Portfolio</li></a>
+        <a style="font-size: 18px;" href="contact.html"><li>Contact</li></a>
+        <a href="price.html"><li>Pricing</li></a>
+        <a href="apply.html"><li>Apply</li></a>      
+      </ul>
+    </header>
+    
+    <!-- content -->
+    <h1 class="fh">Application</h1>
+    <div class="n-para">
+      <p>Triple A is now looking for new recruits. Employees work five days a week from 8:00am until 4:00pm. $10 an hour. Vacation days vary and are not paid. Sick days vary and are paid. Lunch breaks are forty-five minutes long. The company retreat is the third Wednesday of October. Parties at work include: Christmas, Halloween, Valentines Day, New Years, The Greats' Birthdays (including but not limited to: William Donnell, Ben Ferguson, Steve Jobs, Steven Prescott, and Ben Harris), and National Day of Code. You will be required to bring your own party supplies. If interested in joining our Triple A family, please fill out the form below.</p>
+    </div>
+    <center><form action="send.php" class="form">
+      <label class="label">First name:</label>
+      <input name="firstname" id="firstname" type="text" ><br>
+      
+      <label class="label">Last name:</label><br> 
+      <input name="lastname"  id="lastname" type="text"><br>
+      
+      <label class="label">Date of Birth:</label><br>
+      <input name="dob" id="dob" type="text" ><br>
+      
+      <label class="label">Phone Number:</label><br> 
+      <input name="number" id="number" type="text" ><br>
+      
+      <label class="label">Current Work Place:</label><br> 
+      <input name="cwp" id="cwp" type="text" ><br>
+      
+      <label class="label">Email:</label><br> 
+      <input name="address" id="address" type="text" ><br><br>
+      
+      <label class="label">Anything else you wish to tell me?</label><br>
+      <textarea name="comments" id="comments"></textarea>
+      
+      <br><br><br><br><br><br>
+  
+      <center><ul>
+        <a href="confirm.html"><li class="submit" style="border: 1px solid #FF0A55">Submit</li></a>
+      </ul></center>
+    </form></center>
+  </body>
+  
+ <!-- -PHP Submit Button:
+	<form action="send.php" class="form">
+      <label class="label">First name:</label>
+      <input name="firstname" id="firstname" type="text" ><br>
+      <label class="label">Last name:</label><br> 
+      <input name="lastname"  id="lastname" type="text"><br>
+      <label class="label">Date of Birth:</label><br>
+      <input name="dob" id="dob" type="text" ><br>
+      <label class="label">Phone Number:</label><br> 
+      <input name="number" id="number" type="text" ><br>
+      <label class="label">Current Work Place:</label><br> 
+      <input name="cwp" id="cwp" type="text" ><br>
+      <label class="label">Address:</label><br> 
+      <input name="address" id="address" type="text" ><br><br>
+      <label class="label">Anything else you wish to tell me?</label><br>
+      <textarea name="comments" id="comments"></textarea>
+      <input name="submit" type="submit" value="Send" />
+	</form>
+	<?php 
+	$firstname=$_POST['firstname'];
+	$lastname=$_POST['lastname'];
+	$dob=$_POST['dob'];
+	$number=$_POST['number'];
+	$cwp=$_POST['cwp'];
+	$address=$_POST['address'];
+	$comments=$_POST['comments'];
+
+	$date=gmdate("M d Y");
+
+	print"<p><b>$date</b></p>";
+	print"<p>Thank you $firstname $lastname! We will get back to you.</p>";
+
+	$to="aleya.adams@students.jmcss.org";
+
+	$subject="Application";
+
+	$body="Date:$date \n Subject:$subject \n First Name:$firstname \n Last Name:$lastname \n Date of Birth:$dob \n Phone Number:$number \n Current Work 		Place:$cwp \n Addresss:$address \n Additional Information:$comments \n\n";
+
+	mail($to,$subject,$body);
+
+	?>
+
+	We would have done this using PHP, but since we knew it would not work once it was downloaded, we chose to make it link to another page instead. The button does not actually send the file to email.-->
+  
+  
+  <!-- footer -->
+  <footer>
+    <center><div class="header">
+      <p>&copy; 2014 Aleya Adams, Alyssa Gowan, and Ashkan Neshagaran</p>
+      <table class="footer">
+        <thead>
+          <th><a href="index.html">Home</a></th>
+          <th><a href="about.html">About</a></th>
+          <th><a href="portfolio.html">Portfolio</a></th>
+          <th><a href="contact.html">Contact</a></th>
+          <th><a href="price.html">Pricing</a></th>
+          <th><a href="apply.html">Apply</a></th>
+        </thead>
+        <tr>
+          <td>Who We Are</td>
+          <td>Alyssa</td>
+          <td>Portfolio</td>
+          <td>Contact Us</td>
+          <td>Pricing</td>
+          <td>Application</td>
+        </tr>
+        <tr>
+          <td>Our Cause</td>
+          <td>Alyssa</td>
+          <td></td>
+          <td>References</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Our Goal</td>
+          <td>Ashkan</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Our Promise</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div></center>
+  </footer>
+  
+</html>
